@@ -1,7 +1,7 @@
 {
   "name": "capstonesystem",
   "version": "1.0.0",
-  "description": "",
+  "description": "CAPSTONE PROJECT",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3",
-    "mysql2": "^3.11.0"
+    "mysql2": "^3.11.0",
+    "vue-router": "^4.4.3"
   }
 }

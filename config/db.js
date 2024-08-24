@@ -1,21 +1,12 @@
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise'); // Import the promise-based API
 require('dotenv').config();
 
-// Create a connection to the database
-const connection = mysql.createConnection({
+// Create a connection pool
+const pool = mysql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
 
-// Connect to MySQL
-connection.connect((err) => {
-    if (err) {
-        console.error('Error connecting to MySQL:', err.message);
-        return;
-    }
-    console.log('Connected to MySQL');
-});
-
-module.exports = connection;
+module.exports = pool;
