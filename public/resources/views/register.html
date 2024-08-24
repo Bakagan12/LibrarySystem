@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Link to the CSS file inside public/css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div style="display: flex;flex-direction: column; justify-content: center; text-align: center;">
+        <h2>Register</h2>
+        <form id="registerForm" action="/api/auth/register" method="POST">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <div class="input-group" style="display: flex;flex-direction: row;">
+
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name"
+                        style="margin-right: 1rem;">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name"
+                        style="margin-right: 1rem;" required>
+                    <input type="text" id="middle_name" name="middle_name" placeholder="Middle Name" required>
+
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm_password">Password</label>
+                <input type="confirm_password" id="confirm_password" name="confirm_password"
+                    placeholder="Confirm Password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login here</a>.</p>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>
